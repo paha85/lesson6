@@ -2,8 +2,13 @@ import sys
 import linecache
 
 with open('bakery.csv', 'r', encoding='utf-8') as f:
-    i = sys.argv[1]
-    # j = sys.argv[2]
-    f.seek(int(i))
-    # print(linecache.getline('bakery.csv', int(i)))
-    print(f.readline())
+    a = sys.argv[0]
+    print(f.read())
+
+    # i = int(sys.argv[1])
+    # j = int(sys.argv[2])
+    # f.seek(a)
+
+    # result = f.readlines()
+    # for i in result[i - 1:j]:
+    #     print(i, end='')
