@@ -3,6 +3,7 @@ with open('nginx_logs.txt', 'r', encoding='utf-8') as f:
     pars = []
     for line in data:
         word = line.split()
-        del word[1:5], word[3:]
-        pars.append(tuple(word))
+        clear_word = [i.replace('"', '') for i in word]
+        del clear_word[1:5], clear_word[3:]
+        pars.append(tuple(clear_word))
 print(pars)
